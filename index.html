@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#080b13" />
+    <meta name="theme-color" content="#0d1215" />
     <meta
       name="description"
       content="Regnum — a connected Minecraft programming-magic suite by Ian Kengott."
@@ -17,7 +17,7 @@
       <header class="site-header">
         <a class="brand" href="#top" aria-label="Regnum home">
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 42 42" role="img">
+            <svg viewBox="0 0 42 42">
               <circle cx="21" cy="21" r="16" />
               <circle cx="21" cy="21" r="9" />
               <path d="M21 5v32M5 21h32M9.7 9.7l22.6 22.6M32.3 9.7 9.7 32.3" />
@@ -26,49 +26,45 @@
           </span>
           <span>REGNUM</span>
         </a>
-
-        <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#about">What is it?</a>
-          <a href="#repositories">Repositories</a>
-          <a class="nav-github" href="https://github.com/iankengott/regnum-hub" target="_blank" rel="noreferrer">
-            GitHub <span aria-hidden="true">↗</span>
-          </a>
-        </nav>
+        <p class="header-note">THE REALM OF DIRECTION <span>/</span> 1.21.1</p>
+        <a class="header-link" href="https://github.com/iankengott/regnum-hub" target="_blank" rel="noreferrer">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
       </header>
 
       <main id="top">
-        <section class="hero section-pad" aria-labelledby="hero-title">
-          <div class="hero-copy" data-reveal>
-            <p class="eyebrow"><span class="eyebrow-line"></span> Minecraft magic suite</p>
-            <h1 id="hero-title">The realm of <em>direction.</em></h1>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-mark">✦</span> Minecraft programming-magic</p>
+            <h1 id="hero-title">Spellcraft<br /><em>with a grammar.</em></h1>
             <p class="hero-lede">
-              Regnum turns spellcraft into a language. Arrange sigils on geometric circles,
-              read them clockwise from the outside in, and make the world answer.
+              Arrange sigils on geometric circles, read them clockwise from the outside in,
+              and make the world answer. Regnum is the connected suite that gives that idea
+              a place to live.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#repositories">
-                Explore the suite <span aria-hidden="true">↓</span>
-              </a>
+              <a class="button button-primary" href="#index">Open the field index <span aria-hidden="true">↓</span></a>
               <a class="text-link" href="https://github.com/iankengott/vector-regnum" target="_blank" rel="noreferrer">
-                Open the core repo <span aria-hidden="true">↗</span>
+                Start with Vector-Regnum <span aria-hidden="true">↗</span>
               </a>
             </div>
-            <div class="hero-facts" aria-label="Project facts">
+            <div class="hero-meta" aria-label="Project facts">
               <span><strong>08</strong> repositories</span>
-              <span><strong>1.21.1</strong> NeoForge target</span>
-              <span><strong>∞</strong> ways to cast</span>
+              <span><strong>01</strong> shared language</span>
+              <span><strong>∞</strong> directions to explore</span>
             </div>
           </div>
 
-          <div class="hero-art" data-reveal aria-label="A stylized magic circle diagram" role="img">
-            <div class="art-glow"></div>
-            <div class="circle-label label-top">AUTHOR / COMPILE / CAST</div>
+          <div class="hero-figure" aria-label="A stylized Regnum magic circle" role="img">
+            <div class="figure-annotation annotation-top">OUTSIDE → IN</div>
+            <div class="figure-annotation annotation-right">COMPILE / CAST</div>
+            <div class="figure-annotation annotation-bottom"><span class="pulse-dot"></span> server-authoritative</div>
             <svg class="magic-circle" viewBox="0 0 560 560" aria-hidden="true">
               <defs>
                 <linearGradient id="ringGradient" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#a78bfa" />
-                  <stop offset="0.52" stop-color="#6ee7c5" />
-                  <stop offset="1" stop-color="#f3b97c" />
+                  <stop offset="0" stop-color="#b6a5ff" />
+                  <stop offset="0.5" stop-color="#85d3bd" />
+                  <stop offset="1" stop-color="#e88b64" />
                 </linearGradient>
                 <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
                   <feGaussianBlur stdDeviation="6" result="blur" />
@@ -79,163 +75,136 @@
                 </filter>
               </defs>
               <g class="circle-orbit" transform="translate(280 280)">
-                <circle class="orbit-faint" r="216" />
+                <circle class="orbit-faint" r="218" />
                 <circle class="orbit-faint" r="178" />
-                <circle class="orbit-faint" r="134" />
-                <circle class="orbit-core" r="84" />
-                <path class="circle-cross" d="M-216 0h432M0-216v432" />
-                <path class="circle-diagonal" d="M-153-153 153 153M153-153-153 153" />
-                <path class="circle-arc" d="M-178 0a178 178 0 0 1 126-168" />
-                <path class="circle-arc circle-arc-alt" d="M178 0a178 178 0 0 1-126 168" />
-                <path class="direction-path" d="M-212-40c16-92 93-160 190-167" />
+                <circle class="orbit-faint" r="135" />
+                <circle class="orbit-core" r="82" />
+                <path class="circle-cross" d="M-218 0h436M0-218v436" />
+                <path class="circle-diagonal" d="M-154-154 154 154M154-154-154 154" />
+                <path class="circle-arc arc-copper" d="M-178 0a178 178 0 0 1 126-168" />
+                <path class="circle-arc arc-celadon" d="M178 0a178 178 0 0 1-126 168" />
+                <path class="direction-path" d="M-214-42c18-91 94-158 190-165" />
                 <path class="direction-arrow" d="m-18-215-5 10 12-3" />
                 <g class="sigils" filter="url(#softGlow)">
-                  <circle class="sigil sigil-violet" cx="0" cy="-216" r="8" />
-                  <circle class="sigil sigil-teal" cx="153" cy="-153" r="8" />
-                  <circle class="sigil sigil-gold" cx="216" cy="0" r="8" />
-                  <circle class="sigil sigil-violet" cx="153" cy="153" r="8" />
-                  <circle class="sigil sigil-teal" cx="0" cy="216" r="8" />
-                  <circle class="sigil sigil-gold" cx="-153" cy="153" r="8" />
-                  <circle class="sigil sigil-violet" cx="-216" cy="0" r="8" />
-                  <circle class="sigil sigil-teal" cx="-153" cy="-153" r="8" />
+                  <circle class="sigil sigil-lilac" cx="0" cy="-218" r="8" />
+                  <circle class="sigil sigil-celadon" cx="154" cy="-154" r="8" />
+                  <circle class="sigil sigil-copper" cx="218" cy="0" r="8" />
+                  <circle class="sigil sigil-lilac" cx="154" cy="154" r="8" />
+                  <circle class="sigil sigil-celadon" cx="0" cy="218" r="8" />
+                  <circle class="sigil sigil-copper" cx="-154" cy="154" r="8" />
+                  <circle class="sigil sigil-lilac" cx="-218" cy="0" r="8" />
+                  <circle class="sigil sigil-celadon" cx="-154" cy="-154" r="8" />
                   <path class="center-mark" d="M0-30 26 0 0 30-26 0z" />
                   <circle class="center-dot" cx="0" cy="0" r="4" />
                 </g>
               </g>
             </svg>
-            <div class="circle-label label-bottom"><span class="status-dot"></span> server-authoritative magic</div>
+            <span class="figure-index">FIELD NOTE 00 / 05</span>
           </div>
         </section>
 
-        <section class="about section-pad" id="about" aria-labelledby="about-title">
-          <div class="section-kicker" data-reveal>01 <span></span> The idea</div>
-          <div class="about-grid">
-            <h2 id="about-title" data-reveal>Magic with a<br /><em>grammar.</em></h2>
-            <div class="about-copy" data-reveal>
-              <p>
-                Regnum is a programming-magic mod for Minecraft. Players author a spell by
-                placing sigils on a circle, then the core runtime compiles that circle into
-                a typed, bounded program.
-              </p>
-              <p>
-                Valid programs become server-authoritative effects. Invalid ones fail at the
-                exact sigil that broke the grammar and can collapse into bounded Wild Magic.
-                The surrounding repos build the identity, combat, progression, world, admin,
-                and modpack layers around that shared language.
-              </p>
-              <div class="about-note">
-                <span class="note-mark" aria-hidden="true">✦</span>
-                <span>Inspired by hard science and high fantasy.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="flow" aria-label="How Regnum magic works">
-            <div class="flow-step" data-reveal>
-              <span class="flow-number">01</span>
-              <span class="flow-icon" aria-hidden="true">◎</span>
-              <h3>Author</h3>
-              <p>Place sigils on a circle and give the spell a direction.</p>
-            </div>
-            <div class="flow-connector" aria-hidden="true">→</div>
-            <div class="flow-step" data-reveal>
-              <span class="flow-number">02</span>
-              <span class="flow-icon" aria-hidden="true">⌁</span>
-              <h3>Compile</h3>
-              <p>Read clockwise, type-check, price, and bound the program.</p>
-            </div>
-            <div class="flow-connector" aria-hidden="true">→</div>
-            <div class="flow-step" data-reveal>
-              <span class="flow-number">03</span>
-              <span class="flow-icon" aria-hidden="true">✦</span>
-              <h3>Cast</h3>
-              <p>Turn a valid circle into an effect the world can feel.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="repositories section-pad" id="repositories" aria-labelledby="repositories-title">
-          <div class="repo-heading" data-reveal>
+        <section class="index-section" id="index" aria-labelledby="index-title">
+          <div class="index-heading">
             <div>
-              <div class="section-kicker">02 <span></span> The suite</div>
-              <h2 id="repositories-title">Every piece<br /><em>has a place.</em></h2>
+              <p class="section-label">FIELD INDEX <span>/</span> A SHORT WAY IN</p>
+              <h2 id="index-title">Find your way in.</h2>
             </div>
-            <p>
-              Regnum is a connected multi-repository project. Start with the core, then
-              follow the system you want to explore.
-            </p>
+            <div class="carousel-controls">
+              <span class="carousel-counter" aria-live="polite"><strong id="current-slide">01</strong> / <span id="slide-count">05</span></span>
+              <button class="carousel-arrow" type="button" data-carousel="prev" aria-label="Previous field note">←</button>
+              <button class="carousel-arrow" type="button" data-carousel="next" aria-label="Next field note">→</button>
+            </div>
           </div>
 
-          <div class="repo-groups">
-            <div class="repo-group">
-              <div class="group-heading" data-reveal>
-                <span class="group-line"></span>
-                <span>Core &amp; reference</span>
-              </div>
-              <div class="core-grid">
-                <a class="repo-card repo-card-featured" href="https://github.com/iankengott/vector-regnum" target="_blank" rel="noreferrer" data-reveal>
-                  <div class="repo-card-top"><span class="repo-index">01</span><span class="repo-status status-active">Active core</span></div>
-                  <div>
-                    <h3>Vector-Regnum <span aria-hidden="true">↗</span></h3>
-                    <p>The programming-magic runtime: sigil circles, typed execution, mana, spell semantics, authoring, diagnostics, and presentation.</p>
-                  </div>
-                  <div class="repo-tags"><span>NeoForge target</span><span>Core runtime</span></div>
-                </a>
-                <a class="repo-card repo-card-legacy" href="https://github.com/iankengott/vector-regnum-fabric-legacy" target="_blank" rel="noreferrer" data-reveal>
-                  <div class="repo-card-top"><span class="repo-index">02</span><span class="repo-status status-archive">Archived reference</span></div>
-                  <div>
-                    <h3>Vector-Regnum Fabric Legacy <span aria-hidden="true">↗</span></h3>
-                    <p>The frozen Fabric 1.21.1 reference for the verified playable alpha.</p>
-                  </div>
-                  <div class="repo-tags"><span>Fabric 1.21.1</span><span>Reference</span></div>
-                </a>
-              </div>
-            </div>
+          <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Regnum field index">
+            <div class="carousel-track" id="carousel-track">
+              <article class="slide slide-premise" role="group" aria-roledescription="slide" aria-label="1 of 5">
+                <div class="slide-main">
+                  <p class="slide-kicker">01 / THE PREMISE</p>
+                  <h3>One spell.<br /><em>Many systems.</em></h3>
+                  <p>
+                    Regnum is a Minecraft programming-magic mod and a public multi-repository
+                    project. The core runtime owns the language; the suite gives the world
+                    around it distinct, versioned places to grow.
+                  </p>
+                </div>
+                <div class="slide-aside">
+                  <p class="aside-label">The short version</p>
+                  <p class="aside-quote">A spell is a program you can draw.</p>
+                  <a class="inline-link" href="https://github.com/iankengott/vector-regnum" target="_blank" rel="noreferrer">Read the core README <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
 
-            <div class="repo-group">
-              <div class="group-heading" data-reveal>
-                <span class="group-line"></span>
-                <span>Companion projects</span>
-              </div>
-              <div class="companion-grid">
-                <a class="repo-card" href="https://github.com/iankengott/regnum-origins" target="_blank" rel="noreferrer" data-reveal>
-                  <div class="repo-card-top"><span class="repo-index">03</span><span class="repo-arrow" aria-hidden="true">↗</span></div>
-                  <h3>Regnum Origins</h3>
-                  <p>Origins, body traits, natural-element identity, and accessible origin abilities.</p>
-                  <span class="card-rule"></span>
-                </a>
-                <a class="repo-card" href="https://github.com/iankengott/regnum-combat" target="_blank" rel="noreferrer" data-reveal>
-                  <div class="repo-card-top"><span class="repo-index">04</span><span class="repo-arrow" aria-hidden="true">↗</span></div>
-                  <h3>Regnum Combat</h3>
-                  <p>Precision melee, combos, stances, parries, and bounded spell disruption.</p>
-                  <span class="card-rule"></span>
-                </a>
-                <a class="repo-card" href="https://github.com/iankengott/regnum-progression" target="_blank" rel="noreferrer" data-reveal>
-                  <div class="repo-card-top"><span class="repo-index">05</span><span class="repo-arrow" aria-hidden="true">↗</span></div>
-                  <h3>Regnum Progression</h3>
-                  <p>Classes, professions, skill trees, patrons, reputation, and unlocks.</p>
-                  <span class="card-rule"></span>
-                </a>
-                <a class="repo-card" href="https://github.com/iankengott/regnum-world-story" target="_blank" rel="noreferrer" data-reveal>
-                  <div class="repo-card-top"><span class="repo-index">06</span><span class="repo-arrow" aria-hidden="true">↗</span></div>
-                  <h3>Regnum World &amp; Story</h3>
-                  <p>Primordials, story state, dimensions, regional weather, and mana ecology.</p>
-                  <span class="card-rule"></span>
-                </a>
-                <a class="repo-card" href="https://github.com/iankengott/regnum-administration" target="_blank" rel="noreferrer" data-reveal>
-                  <div class="repo-card-top"><span class="repo-index">07</span><span class="repo-arrow" aria-hidden="true">↗</span></div>
-                  <h3>Regnum Administration</h3>
-                  <p>Permissioned admin tools and approved SMP control surfaces.</p>
-                  <span class="card-rule"></span>
-                </a>
-                <a class="repo-card" href="https://github.com/iankengott/regnum-smp-modpack" target="_blank" rel="noreferrer" data-reveal>
-                  <div class="repo-card-top"><span class="repo-index">08</span><span class="repo-arrow" aria-hidden="true">↗</span></div>
-                  <h3>Regnum SMP Modpack</h3>
-                  <p>Reproducible NeoForge pack, compatibility, distribution, and integration testing.</p>
-                  <span class="card-rule"></span>
-                </a>
-              </div>
+              <article class="slide slide-process" role="group" aria-roledescription="slide" aria-label="2 of 5" aria-hidden="true">
+                <div class="slide-main">
+                  <p class="slide-kicker">02 / THE GRAMMAR</p>
+                  <h3>Author.<br />Compile. <em>Cast.</em></h3>
+                  <p>Every direction starts at the circle. The language makes the order visible, the runtime makes the limits real.</p>
+                </div>
+                <div class="process-steps" aria-label="The Regnum casting process">
+                  <div class="process-step"><span>01</span><div><strong>Author</strong><small>Place sigils on a circle.</small></div></div>
+                  <div class="process-step"><span>02</span><div><strong>Compile</strong><small>Type-check, price, and bound it.</small></div></div>
+                  <div class="process-step"><span>03</span><div><strong>Cast</strong><small>Let the server make it real.</small></div></div>
+                </div>
+              </article>
+
+              <article class="slide slide-core" role="group" aria-roledescription="slide" aria-label="3 of 5" aria-hidden="true">
+                <div class="slide-main">
+                  <p class="slide-kicker">03 / CORE &amp; REFERENCE</p>
+                  <h3>Start at<br /><em>the source.</em></h3>
+                  <p>Two repositories hold the active runtime and the frozen reference that proves where it came from.</p>
+                </div>
+                <div class="repo-stack">
+                  <a class="repo-row repo-row-featured" href="https://github.com/iankengott/vector-regnum" target="_blank" rel="noreferrer">
+                    <span class="repo-row-number">01</span><span><strong>Vector-Regnum</strong><small>Active core · NeoForge 1.21.1 target</small></span><b aria-hidden="true">↗</b>
+                  </a>
+                  <a class="repo-row" href="https://github.com/iankengott/vector-regnum-fabric-legacy" target="_blank" rel="noreferrer">
+                    <span class="repo-row-number">02</span><span><strong>Vector-Regnum Fabric Legacy</strong><small>Archived reference · playable Fabric alpha</small></span><b aria-hidden="true">↗</b>
+                  </a>
+                </div>
+              </article>
+
+              <article class="slide slide-companions" role="group" aria-roledescription="slide" aria-label="4 of 5" aria-hidden="true">
+                <div class="slide-main">
+                  <p class="slide-kicker">04 / COMPANION PROJECTS</p>
+                  <h3>Every piece<br /><em>has a place.</em></h3>
+                  <p>Follow the part of the SMP you want to shape. Each project owns a narrow system and connects through the suite.</p>
+                </div>
+                <div class="companion-list">
+                  <a href="https://github.com/iankengott/regnum-origins" target="_blank" rel="noreferrer"><span>Origins</span><small>Identity &amp; body traits</small><b aria-hidden="true">↗</b></a>
+                  <a href="https://github.com/iankengott/regnum-combat" target="_blank" rel="noreferrer"><span>Combat</span><small>Precision melee &amp; disruption</small><b aria-hidden="true">↗</b></a>
+                  <a href="https://github.com/iankengott/regnum-progression" target="_blank" rel="noreferrer"><span>Progression</span><small>Classes &amp; skill trees</small><b aria-hidden="true">↗</b></a>
+                  <a href="https://github.com/iankengott/regnum-world-story" target="_blank" rel="noreferrer"><span>World &amp; Story</span><small>Lore, dimensions &amp; ecology</small><b aria-hidden="true">↗</b></a>
+                  <a href="https://github.com/iankengott/regnum-administration" target="_blank" rel="noreferrer"><span>Administration</span><small>Permissioned control surfaces</small><b aria-hidden="true">↗</b></a>
+                  <a href="https://github.com/iankengott/regnum-smp-modpack" target="_blank" rel="noreferrer"><span>SMP Modpack</span><small>Distribution &amp; integration</small><b aria-hidden="true">↗</b></a>
+                </div>
+              </article>
+
+              <article class="slide slide-direction" role="group" aria-roledescription="slide" aria-label="5 of 5" aria-hidden="true">
+                <div class="slide-main">
+                  <p class="slide-kicker">05 / THE DIRECTION</p>
+                  <h3>From a playable<br /><em>alpha to an SMP.</em></h3>
+                  <p>
+                    The verified Fabric alpha is now the migration reference. Active development
+                    moves toward NeoForge 1.21.1, then outward into identity, elements, progression,
+                    world story, and a reproducible pack.
+                  </p>
+                </div>
+                <div class="direction-note">
+                  <span class="direction-line"></span>
+                  <p><strong>Current target</strong><br />NeoForge 1.21.1</p>
+                  <a class="button button-outline" href="https://github.com/iankengott" target="_blank" rel="noreferrer">View all on GitHub <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
             </div>
+          </div>
+
+          <div class="carousel-dots" role="tablist" aria-label="Choose a field note">
+            <button type="button" role="tab" aria-selected="true" aria-label="Show field note 1" data-slide-to="0"><span></span></button>
+            <button type="button" role="tab" aria-selected="false" aria-label="Show field note 2" data-slide-to="1"><span></span></button>
+            <button type="button" role="tab" aria-selected="false" aria-label="Show field note 3" data-slide-to="2"><span></span></button>
+            <button type="button" role="tab" aria-selected="false" aria-label="Show field note 4" data-slide-to="3"><span></span></button>
+            <button type="button" role="tab" aria-selected="false" aria-label="Show field note 5" data-slide-to="4"><span></span></button>
           </div>
         </section>
       </main>
@@ -247,9 +216,8 @@
           </span>
           <span>REGNUM</span>
         </a>
-        <span class="footer-note">The Realm of Direction</span>
-        <a class="footer-link" href="https://github.com/iankengott" target="_blank" rel="noreferrer">iankengott on GitHub <span aria-hidden="true">↗</span></a>
-        <span class="footer-year">© <span id="year">2026</span></span>
+        <span class="footer-note">A connected Minecraft suite by Ian Kengott</span>
+        <a class="footer-link" href="https://github.com/iankengott/regnum-hub" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
       </footer>
     </div>
     <script src="script.js"></script>
