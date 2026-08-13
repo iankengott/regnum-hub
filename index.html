@@ -29,6 +29,51 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="ambient-runes" aria-hidden="true">
+      <svg class="ambient-rune-defs">
+        <defs>
+          <symbol id="ambient-glyph-origin" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="25" />
+            <path d="M32 7v50M7 32h50M14 14l36 36M50 14 14 50" />
+            <circle cx="32" cy="32" r="7" />
+          </symbol>
+          <symbol id="ambient-glyph-prism" viewBox="0 0 64 64">
+            <path d="M32 5 58 50H6Z" />
+            <path d="m32 16 15 27H17ZM32 5v45" />
+            <circle cx="32" cy="50" r="5" />
+          </symbol>
+          <symbol id="ambient-glyph-branch" viewBox="0 0 64 64">
+            <path d="M12 55 32 9l20 46M20 37h24M17 46l30-18M17 28l30 18" />
+            <circle cx="32" cy="9" r="4" />
+            <circle cx="12" cy="55" r="4" />
+            <circle cx="52" cy="55" r="4" />
+          </symbol>
+          <symbol id="ambient-glyph-gate" viewBox="0 0 64 64">
+            <path d="M10 54V14l22-9 22 9v40M10 14l22 16 22-16M32 30v29" />
+            <path d="M20 54V38h24v16" />
+          </symbol>
+          <symbol id="ambient-glyph-orbit" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="21" />
+            <path d="M5 32h54M32 5v54M13 13l38 38M51 13 13 51" />
+            <path d="M32 20 44 32 32 44 20 32Z" />
+          </symbol>
+        </defs>
+      </svg>
+      <svg class="ambient-rune rune-lilac" style="--x: 5%; --y: 11%; --size: 54px; --drift: 28px; --turn: 13deg; --time: 17s; --delay: -4s"><use href="#ambient-glyph-origin" /></svg>
+      <svg class="ambient-rune rune-celadon" style="--x: 29%; --y: 7%; --size: 31px; --drift: 18px; --turn: -18deg; --time: 13s; --delay: -9s"><use href="#ambient-glyph-prism" /></svg>
+      <svg class="ambient-rune rune-copper" style="--x: 70%; --y: 13%; --size: 43px; --drift: 34px; --turn: 22deg; --time: 19s; --delay: -7s"><use href="#ambient-glyph-gate" /></svg>
+      <svg class="ambient-rune rune-celadon rune-faint" style="--x: 91%; --y: 22%; --size: 70px; --drift: 24px; --turn: -12deg; --time: 22s; --delay: -13s"><use href="#ambient-glyph-orbit" /></svg>
+      <svg class="ambient-rune rune-copper" style="--x: 15%; --y: 38%; --size: 37px; --drift: 29px; --turn: 17deg; --time: 16s; --delay: -11s"><use href="#ambient-glyph-branch" /></svg>
+      <svg class="ambient-rune rune-lilac rune-faint" style="--x: 45%; --y: 33%; --size: 76px; --drift: 19px; --turn: -25deg; --time: 24s; --delay: -2s"><use href="#ambient-glyph-origin" /></svg>
+      <svg class="ambient-rune rune-celadon" style="--x: 80%; --y: 43%; --size: 34px; --drift: 36px; --turn: 15deg; --time: 18s; --delay: -8s"><use href="#ambient-glyph-prism" /></svg>
+      <svg class="ambient-rune rune-lilac" style="--x: 3%; --y: 61%; --size: 39px; --drift: 21px; --turn: -14deg; --time: 15s; --delay: -5s"><use href="#ambient-glyph-gate" /></svg>
+      <svg class="ambient-rune rune-copper rune-faint" style="--x: 56%; --y: 59%; --size: 67px; --drift: 31px; --turn: 19deg; --time: 21s; --delay: -15s"><use href="#ambient-glyph-orbit" /></svg>
+      <svg class="ambient-rune rune-celadon" style="--x: 94%; --y: 69%; --size: 41px; --drift: 26px; --turn: -22deg; --time: 17s; --delay: -6s"><use href="#ambient-glyph-branch" /></svg>
+      <svg class="ambient-rune rune-lilac" style="--x: 21%; --y: 78%; --size: 48px; --drift: 33px; --turn: 16deg; --time: 20s; --delay: -12s"><use href="#ambient-glyph-prism" /></svg>
+      <svg class="ambient-rune rune-copper" style="--x: 73%; --y: 82%; --size: 32px; --drift: 17px; --turn: -16deg; --time: 14s; --delay: -3s"><use href="#ambient-glyph-gate" /></svg>
+      <svg class="ambient-rune rune-celadon rune-faint" style="--x: 41%; --y: 91%; --size: 62px; --drift: 23px; --turn: 20deg; --time: 23s; --delay: -17s"><use href="#ambient-glyph-origin" /></svg>
+      <svg class="ambient-rune rune-lilac" style="--x: 88%; --y: 94%; --size: 36px; --drift: 30px; --turn: -19deg; --time: 16s; --delay: -10s"><use href="#ambient-glyph-branch" /></svg>
+    </div>
     <div class="site-shell">
       <header class="site-header">
         <a class="brand" href="#top" aria-label="Regnum home">
