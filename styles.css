@@ -177,60 +177,51 @@ h1 em, h2 em, h3 em { color: var(--copper); font-style: italic; }
 .hero-meta strong { color: var(--paper); font-size: 11px; font-weight: 500; }
 
 .hero-figure { position: relative; display: grid; place-items: center; min-height: 470px; perspective: 960px; animation: figure-in 950ms 100ms ease both; }
-.hero-figure::before { position: absolute; width: 72%; aspect-ratio: 1; border-radius: 50%; background: rgba(143, 124, 199, 0.2); content: ''; filter: blur(62px); transform: translateY(12%); }
-.hero-figure::after { position: absolute; bottom: 14%; width: 66%; height: 12%; border-radius: 50%; background: rgba(6, 10, 13, 0.68); box-shadow: 0 0 54px rgba(133, 211, 189, 0.16); content: ''; filter: blur(16px); transform: rotate(-7deg); }
-.magic-circle { position: relative; z-index: 1; width: min(108%, 540px); overflow: visible; transform-style: preserve-3d; animation: float-3d 9s ease-in-out infinite; }
-.disc-depth circle { fill: none; stroke: url(#edgeGradient); stroke-width: 12; }
-.disc-depth circle + circle { stroke: rgba(12, 18, 22, 0.92); stroke-width: 6; }
-.disc-depth path { fill: none; stroke: rgba(5, 9, 12, 0.76); stroke-width: 3; }
-.disc-face { fill: url(#discGradient); stroke: rgba(238, 232, 218, 0.1); stroke-width: 1; }
-.disc-rim { fill: none; }
-.rim-outer { stroke: url(#ringGradient); stroke-width: 2.2; }
-.rim-inner { stroke: rgba(238, 232, 218, 0.42); stroke-width: 1; stroke-dasharray: 3 7; }
-.orbit-faint { fill: none; stroke: rgba(238, 232, 218, 0.28); stroke-width: 1; }
-.orbit-ticks { fill: none; stroke: rgba(238, 232, 218, 0.5); stroke-width: 1.4; }
-.ticks-outer { stroke-dasharray: 2 10; }
-.ticks-inner { stroke: rgba(133, 211, 189, 0.46); stroke-dasharray: 1 15; }
-.orbit-band { fill: none; stroke: rgba(182, 165, 255, 0.1); stroke-width: 28; }
-.geometry-line { fill: none; stroke-linejoin: bevel; }
-.geometry-octagon { stroke: rgba(238, 232, 218, 0.48); stroke-width: 1.25; }
-.geometry-star { stroke: rgba(182, 165, 255, 0.42); stroke-width: 1; }
-.geometry-square { stroke: rgba(232, 139, 100, 0.42); stroke-width: 1.2; stroke-dasharray: 5 5; }
-.channels path, .channels circle { fill: none; stroke: rgba(238, 232, 218, 0.25); stroke-width: 1; }
-.channels .channel-fine { stroke: rgba(133, 211, 189, 0.18); stroke-dasharray: 2 6; }
-.channels .channel-dashed { stroke: rgba(182, 165, 255, 0.32); stroke-dasharray: 1 9; }
-.circuit-marks path, .circuit-marks circle { fill: none; stroke: rgba(133, 211, 189, 0.55); stroke-width: 1.2; }
-.circuit-marks circle { fill: var(--celadon); stroke: none; }
-.minor-runes { color: rgba(238, 232, 218, 0.6); }
-.minor-runes use { fill: none; stroke: currentColor; stroke-width: 1.2; }
-.circle-arc { fill: none; stroke-width: 2; stroke-dasharray: 2 6; }
-.ring-spin { transform-box: fill-box; transform-origin: center; animation: spin 90s linear infinite; }
-.ring-spin-reverse { transform-box: fill-box; transform-origin: center; animation: spin 130s linear infinite reverse; }
-.arc-copper { stroke: rgba(232, 139, 100, 0.8); }
-.arc-celadon { stroke: rgba(133, 211, 189, 0.8); }
-.direction-path { fill: none; stroke: var(--copper); stroke-width: 1.3; stroke-dasharray: 3 7; }
-.direction-arrow { fill: none; stroke: var(--copper); stroke-width: 1.3; }
-.node-lilac { color: var(--lilac); }
-.node-celadon { color: var(--celadon); }
-.node-copper { color: var(--copper); }
-.node-halo { fill: rgba(19, 25, 29, 0.9); stroke: currentColor; stroke-width: 1; }
-.node-diamond { fill: currentColor; fill-opacity: 0.13; stroke: currentColor; stroke-width: 1.4; }
-.node-ring { fill: rgba(13, 18, 21, 0.92); stroke: rgba(255, 255, 255, 0.82); stroke-width: 1; }
-.node-pin { fill: currentColor; stroke: none; }
-.node-glyph { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: square; stroke-linejoin: bevel; }
-.focus-shadow { fill: rgba(4, 7, 9, 0.75); }
-.focus-ring { fill: rgba(16, 22, 26, 0.94); }
-.focus-ring-outer { stroke: url(#ringGradient); stroke-width: 2.4; }
-.focus-ring-inner { fill: none; stroke: rgba(238, 232, 218, 0.48); stroke-width: 1; stroke-dasharray: 2 5; }
-.focus-star { fill: rgba(182, 165, 255, 0.12); stroke: rgba(182, 165, 255, 0.85); stroke-width: 1.3; }
-.focus-prism { fill: rgba(133, 211, 189, 0.12); stroke: rgba(238, 232, 218, 0.9); stroke-width: 1.5; }
-.center-dot { fill: url(#focusGradient); stroke: rgba(255, 255, 255, 0.85); stroke-width: 1; }
+.hero-figure::before { position: absolute; width: 72%; aspect-ratio: 1; border-radius: 50%; background: rgba(143, 124, 199, 0.2); content: ''; filter: blur(62px); }
+.hero-figure::after { position: absolute; bottom: 10%; width: 52%; height: 7%; border-radius: 50%; background: rgba(6, 10, 13, 0.56); box-shadow: 0 0 48px rgba(133, 211, 189, 0.12); content: ''; filter: blur(18px); }
+.magic-circle { position: relative; z-index: 1; width: min(108%, 540px); overflow: visible; transform-style: preserve-3d; animation: runtime-float 8s ease-in-out infinite; }
+.runtime-aura { transform-box: fill-box; transform-origin: center; animation: invocation-aura 3.8s ease-out infinite; }
+.runtime-aura-ring { fill: none; stroke-width: 1; }
+.aura-one { stroke: rgba(182, 165, 255, 0.28); stroke-dasharray: 2 11; }
+.aura-two { stroke: rgba(133, 211, 189, 0.16); stroke-dasharray: 1 8; }
+.runtime-ring { fill: rgba(23, 27, 32, 0.08); stroke-width: 1.35; }
+.runtime-ring-0 { stroke: url(#ringGradient); }
+.runtime-ring-1 { stroke: rgba(182, 165, 255, 0.5); stroke-dasharray: 4 6; }
+.runtime-ring-2 { stroke: rgba(133, 211, 189, 0.58); stroke-dasharray: 2 5; }
+.runtime-particle { transform-box: fill-box; transform-origin: center; animation: runtime-particle 1.6s ease-in-out var(--particle-delay) infinite alternate; }
+.particle-end-rod { fill: rgba(238, 232, 218, 0.85); filter: url(#circleGlow); }
+.particle-enchant { fill: rgba(182, 165, 255, 0.68); }
+.runtime-slot { fill: var(--ink-deep); stroke: rgba(238, 232, 218, 0.28); stroke-width: 1; }
+.runtime-route { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.route-shadow { stroke: rgba(4, 8, 10, 0.5); stroke-width: 3; }
+.route-energy { stroke: rgba(133, 211, 189, 0.28); stroke-width: 1.2; stroke-dasharray: 3 8; animation: route-flow 1.4s linear infinite; }
+.runtime-beam { stroke: rgba(182, 165, 255, 0.88); stroke-width: 2; stroke-dasharray: 2 6; filter: url(#circleGlow); transition: x2 260ms ease, y2 260ms ease; }
+.runtime-node { color: var(--paper); opacity: 0.66; transition: opacity 180ms ease; }
+.runtime-node.node-execute { color: var(--copper); }
+.runtime-node-pulse { fill: currentColor; fill-opacity: 0; stroke: currentColor; stroke-width: 1; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.runtime-node-frame { fill: var(--ink-deep); stroke: currentColor; stroke-width: 1.25; }
+.runtime-node-core { fill: rgba(23, 27, 32, 0.96); stroke: rgba(238, 232, 218, 0.72); stroke-width: 1; }
+.runtime-glyph { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: square; stroke-linejoin: bevel; }
+.runtime-glyph-number { fill: currentColor; font-family: var(--mono); font-size: 7px; text-anchor: middle; }
+.runtime-node-order { fill: var(--quiet); font-family: var(--mono); font-size: 8px; letter-spacing: 0.08em; }
+.runtime-node.is-complete { opacity: 0.9; }
+.runtime-node.is-active { color: var(--celadon); opacity: 1; filter: url(#circleGlow); }
+.runtime-node.is-active.node-execute { color: var(--copper); }
+.runtime-node.is-active .runtime-node-pulse { opacity: 1; animation: node-pulse 600ms ease-out infinite; }
+.runtime-core { filter: url(#circleGlow); }
+.runtime-core-orbit { fill: rgba(23, 27, 32, 0.82); stroke-width: 1.2; transform-box: fill-box; transform-origin: center; }
+.core-orbit-outer { stroke: rgba(182, 165, 255, 0.62); stroke-dasharray: 2 6; animation: spin 28s linear infinite; }
+.core-orbit-inner { fill: rgba(13, 18, 21, 0.94); stroke: rgba(133, 211, 189, 0.62); stroke-dasharray: 5 4; animation: spin 19s linear infinite reverse; }
+.runtime-core-mark { fill: rgba(182, 165, 255, 0.09); stroke: rgba(238, 232, 218, 0.76); stroke-width: 1.2; }
+.runtime-core-light { fill: url(#coreGradient); }
+.runtime-core-text { fill: var(--ink-deep); font-family: var(--mono); font-size: 8px; font-weight: 500; text-anchor: middle; }
 .figure-annotation { position: absolute; z-index: 1; color: var(--quiet); font-size: 10px; }
 .annotation-top { top: 57px; left: 10%; color: var(--copper); }
 .annotation-right { top: 48%; right: -1%; color: var(--celadon); writing-mode: vertical-rl; }
-.annotation-bottom { bottom: 54px; left: 8%; }
+.annotation-bottom { bottom: 48px; left: 4%; max-width: 72%; color: var(--paper); }
 .pulse-dot { display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: var(--celadon); box-shadow: 0 0 10px var(--celadon); }
-.figure-index { position: absolute; right: 9%; bottom: 34px; color: var(--quiet); font-size: 10px; }
+.figure-index { position: absolute; z-index: 2; right: 4%; bottom: 27px; color: var(--quiet); font-size: 9px; transition: color 180ms ease; }
+.figure-index:hover, .figure-index:focus-visible { color: var(--celadon); }
 
 .index-section { padding: 0 0 28px; border-top: 1px solid var(--line); }
 .index-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; padding: 30px 0 20px; }
@@ -325,11 +316,12 @@ h3 { margin: 0 0 18px; font-size: clamp(2.5rem, 3.7vw, 3.65rem); line-height: 0.
 
 @keyframes rise { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes figure-in { from { opacity: 0; transform: scale(0.96) rotate(-2deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
-@keyframes float-3d {
-  0%, 100% { transform: translateY(0) rotateX(48deg) rotateZ(-8deg); }
-  50% { transform: translateY(-10px) rotateX(51deg) rotateZ(-5deg); }
-}
+@keyframes runtime-float { 0%, 100% { transform: translateY(0) rotateX(9deg) rotateZ(-3deg); } 50% { transform: translateY(-10px) rotateX(12deg) rotateZ(1deg); } }
 @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes invocation-aura { 0% { opacity: 0; transform: scale(0.78) rotate(-10deg); } 18% { opacity: 0.85; } 72%, 100% { opacity: 0; transform: scale(1.12) rotate(7deg); } }
+@keyframes runtime-particle { from { opacity: 0.25; transform: scale(0.7); } to { opacity: 1; transform: scale(1.35); } }
+@keyframes route-flow { to { stroke-dashoffset: -22; } }
+@keyframes node-pulse { from { opacity: 0.85; transform: scale(0.72); } to { opacity: 0; transform: scale(1.32); } }
 @keyframes rune-float {
   0% { transform: translate3d(0, calc(var(--drift) * -0.45), 0) rotate(calc(var(--turn) * -0.6)) scale(0.94); }
   50% { opacity: 0.2; }
