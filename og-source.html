@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+    <style>
+      * { box-sizing: border-box; margin: 0; }
+      body {
+        display: grid;
+        grid-template-columns: 1fr 520px;
+        align-items: center;
+        gap: 40px;
+        width: 1200px;
+        height: 630px;
+        padding: 66px 78px;
+        overflow: hidden;
+        color: #f0eee7;
+        background:
+          radial-gradient(circle at 78% 24%, rgba(143, 124, 199, 0.22), transparent 30rem),
+          radial-gradient(circle at 6% 74%, rgba(91, 158, 145, 0.15), transparent 28rem),
+          linear-gradient(135deg, #2c3238 0%, #252a30 52%, #20262c 100%);
+        font-family: 'Space Grotesk', system-ui, sans-serif;
+      }
+      .eyebrow {
+        margin-bottom: 30px;
+        color: #85d3bd;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 19px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin-bottom: 22px;
+        font-family: 'Instrument Serif', Georgia, serif;
+        font-size: 84px;
+        font-weight: 400;
+        letter-spacing: -0.045em;
+        line-height: 0.9;
+      }
+      h1 em { color: #e88b64; font-style: italic; }
+      p { max-width: 520px; color: #c8ccca; font-size: 25px; line-height: 1.5; }
+      .meta {
+        display: flex;
+        gap: 34px;
+        margin-top: 34px;
+        color: #a3abac;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 17px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .meta b { color: #f0eee7; font-weight: 500; }
+      .meta span { white-space: nowrap; }
+      svg { width: 500px; }
+      .ring { fill: none; stroke: rgba(238, 232, 218, 0.32); stroke-width: 1.4; }
+      .band { fill: none; stroke: rgba(182, 165, 255, 0.22); stroke-width: 40; }
+      .ticks { fill: none; stroke: rgba(238, 232, 218, 0.4); stroke-width: 1.4; stroke-dasharray: 2 16; }
+      .link { fill: none; stroke: rgba(238, 232, 218, 0.26); stroke-width: 1.4; }
+      .cross { fill: none; stroke: rgba(238, 232, 218, 0.2); stroke-width: 1.4; }
+      .core { fill: rgba(23, 27, 32, 0.6); stroke: url(#g); stroke-width: 2; stroke-dasharray: 3 8; }
+      .sig { stroke: rgba(255, 255, 255, 0.8); stroke-width: 2; }
+      .mark { fill: none; stroke: #f0eee7; stroke-width: 2; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p class="eyebrow">Minecraft programming-magic</p>
+      <h1>Spellcraft<br /><em>with a grammar.</em></h1>
+      <p>Eight connected repositories, one shared language. Draw a spell as a program, then cast it.</p>
+      <div class="meta"><span><b>08</b> repositories</span><span><b>01</b> shared language</span><span>iankengott</span></div>
+    </div>
+    <svg viewBox="0 0 560 560">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#b6a5ff" />
+          <stop offset="0.5" stop-color="#85d3bd" />
+          <stop offset="1" stop-color="#e88b64" />
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="6" result="b" />
+          <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+        </filter>
+      </defs>
+      <g transform="translate(280 280)">
+        <circle class="band" r="198" />
+        <circle class="ring" r="218" />
+        <circle class="ring" r="178" />
+        <circle class="ticks" r="208" />
+        <circle class="ring" r="135" />
+        <circle class="core" r="82" />
+        <path class="cross" d="M-218 0h436M0-218v436" />
+        <path class="link" d="M0-218 154-154 218 0 154 154 0 218-154 154-218 0-154-154Z" />
+        <g filter="url(#glow)">
+          <circle class="sig" cx="0" cy="-218" r="10" fill="#b6a5ff" />
+          <circle class="sig" cx="154" cy="-154" r="10" fill="#85d3bd" />
+          <circle class="sig" cx="218" cy="0" r="10" fill="#e88b64" />
+          <circle class="sig" cx="154" cy="154" r="10" fill="#b6a5ff" />
+          <circle class="sig" cx="0" cy="218" r="10" fill="#85d3bd" />
+          <circle class="sig" cx="-154" cy="154" r="10" fill="#e88b64" />
+          <circle class="sig" cx="-218" cy="0" r="10" fill="#b6a5ff" />
+          <circle class="sig" cx="-154" cy="-154" r="10" fill="#85d3bd" />
+          <path class="mark" d="M0-34 30 0 0 34-30 0z" />
+          <circle cx="0" cy="0" r="5" fill="#85d3bd" />
+        </g>
+      </g>
+    </svg>
+  </body>
+</html>
