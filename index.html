@@ -75,47 +75,135 @@
             <div class="figure-annotation annotation-top">READ OUTSIDE → IN</div>
             <div class="figure-annotation annotation-right">COMPILE / CAST</div>
             <div class="figure-annotation annotation-bottom"><span class="pulse-dot"></span> runs on the server</div>
-            <svg class="magic-circle" viewBox="0 0 560 560" aria-hidden="true">
+            <svg class="magic-circle" viewBox="0 0 620 620" aria-hidden="true">
               <defs>
                 <linearGradient id="ringGradient" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0" stop-color="#b6a5ff" />
                   <stop offset="0.5" stop-color="#85d3bd" />
                   <stop offset="1" stop-color="#e88b64" />
                 </linearGradient>
+                <radialGradient id="discGradient" cx="42%" cy="32%" r="68%">
+                  <stop offset="0" stop-color="#b6a5ff" stop-opacity="0.15" />
+                  <stop offset="0.52" stop-color="#263139" stop-opacity="0.75" />
+                  <stop offset="1" stop-color="#10161a" stop-opacity="0.96" />
+                </radialGradient>
+                <linearGradient id="edgeGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#eee8da" stop-opacity="0.1" />
+                  <stop offset="0.45" stop-color="#85d3bd" stop-opacity="0.5" />
+                  <stop offset="1" stop-color="#0a0f12" stop-opacity="0.95" />
+                </linearGradient>
+                <radialGradient id="focusGradient" cx="38%" cy="30%" r="68%">
+                  <stop offset="0" stop-color="#fff" />
+                  <stop offset="0.18" stop-color="#b8fff0" />
+                  <stop offset="0.62" stop-color="#85d3bd" />
+                  <stop offset="1" stop-color="#3f6f68" />
+                </radialGradient>
                 <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-                  <feGaussianBlur stdDeviation="6" result="blur" />
+                  <feGaussianBlur stdDeviation="4" result="blur" />
                   <feMerge>
                     <feMergeNode in="blur" />
                     <feMergeNode in="SourceGraphic" />
                   </feMerge>
                 </filter>
+                <filter id="deepShadow" x="-40%" y="-40%" width="180%" height="200%">
+                  <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="blur" />
+                  <feOffset dy="18" result="offset" />
+                  <feColorMatrix in="offset" type="matrix" values="0 0 0 0 0.02 0 0 0 0 0.04 0 0 0 0 0.05 0 0 0 .9 0" />
+                  <feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+                <filter id="focusGlow" x="-150%" y="-150%" width="400%" height="400%">
+                  <feGaussianBlur stdDeviation="11" result="blur" />
+                  <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+                <g id="nodeFrame">
+                  <circle class="node-halo" r="19" />
+                  <path class="node-diamond" d="M0-14 14 0 0 14-14 0Z" />
+                  <circle class="node-ring" r="9" />
+                  <circle class="node-pin" r="2.5" />
+                </g>
+                <g id="minorRune">
+                  <path d="M-5-9V9M-5 0H5M5-9V-3L-1 3 5 9" />
+                </g>
               </defs>
-              <g class="circle-orbit" transform="translate(280 280)">
-                <circle class="orbit-band" r="198" />
-                <circle class="orbit-faint" r="218" />
-                <circle class="orbit-faint" r="178" />
-                <circle class="ring-spin orbit-ticks" r="208" />
-                <circle class="ring-spin-reverse orbit-ticks" r="188" />
-                <circle class="orbit-faint" r="135" />
-                <circle class="orbit-core" r="82" />
-                <path class="circle-cross" d="M-218 0h436M0-218v436" />
-                <path class="circle-diagonal" d="M-154-154 154 154M154-154-154 154" />
-                <path class="sigil-link" d="M0-218 154-154 218 0 154 154 0 218-154 154-218 0-154-154Z" />
-                <path class="circle-arc arc-copper" d="M-178 0a178 178 0 0 1 126-168" />
-                <path class="circle-arc arc-celadon" d="M178 0a178 178 0 0 1-126 168" />
-                <path class="direction-path" d="M-214-42c18-91 94-158 190-165" />
-                <path class="direction-arrow" d="m-18-215-5 10 12-3" />
-                <g class="sigils" filter="url(#softGlow)">
-                  <circle class="sigil sigil-lilac" cx="0" cy="-218" r="8" />
-                  <circle class="sigil sigil-celadon" cx="154" cy="-154" r="8" />
-                  <circle class="sigil sigil-copper" cx="218" cy="0" r="8" />
-                  <circle class="sigil sigil-lilac" cx="154" cy="154" r="8" />
-                  <circle class="sigil sigil-celadon" cx="0" cy="218" r="8" />
-                  <circle class="sigil sigil-copper" cx="-154" cy="154" r="8" />
-                  <circle class="sigil sigil-lilac" cx="-218" cy="0" r="8" />
-                  <circle class="sigil sigil-celadon" cx="-154" cy="-154" r="8" />
-                  <path class="center-mark" d="M0-30 26 0 0 30-26 0z" />
-                  <circle class="center-dot" cx="0" cy="0" r="4" />
+              <g class="spell-assembly" transform="translate(310 300)" filter="url(#deepShadow)">
+                <g class="disc-depth" transform="translate(0 14)">
+                  <circle r="249" />
+                  <circle r="239" />
+                  <path d="M-176-176 176 176M176-176-176 176M-249 0h498M0-249v498" />
+                </g>
+
+                <circle class="disc-face" r="248" />
+                <circle class="disc-rim rim-outer" r="248" />
+                <circle class="disc-rim rim-inner" r="238" />
+                <circle class="orbit-band" r="209" />
+                <circle class="orbit-faint" r="225" />
+                <circle class="orbit-faint" r="193" />
+
+                <g class="ring-spin orbit-detail">
+                  <circle class="orbit-ticks ticks-outer" r="231" />
+                  <circle class="orbit-ticks ticks-inner" r="217" />
+                  <g class="minor-runes">
+                    <use href="#minorRune" transform="translate(0 -230)" />
+                    <use href="#minorRune" transform="rotate(30) translate(0 -230) rotate(-30)" />
+                    <use href="#minorRune" transform="rotate(60) translate(0 -230) rotate(-60)" />
+                    <use href="#minorRune" transform="rotate(90) translate(0 -230) rotate(-90)" />
+                    <use href="#minorRune" transform="rotate(120) translate(0 -230) rotate(-120)" />
+                    <use href="#minorRune" transform="rotate(150) translate(0 -230) rotate(-150)" />
+                    <use href="#minorRune" transform="rotate(180) translate(0 -230) rotate(-180)" />
+                    <use href="#minorRune" transform="rotate(210) translate(0 -230) rotate(-210)" />
+                    <use href="#minorRune" transform="rotate(240) translate(0 -230) rotate(-240)" />
+                    <use href="#minorRune" transform="rotate(270) translate(0 -230) rotate(-270)" />
+                    <use href="#minorRune" transform="rotate(300) translate(0 -230) rotate(-300)" />
+                    <use href="#minorRune" transform="rotate(330) translate(0 -230) rotate(-330)" />
+                  </g>
+                </g>
+
+                <g class="ring-spin-reverse geometry-layer">
+                  <path class="geometry-line geometry-octagon" d="M0-209 148-148 209 0 148 148 0 209-148 148-209 0-148-148Z" />
+                  <path class="geometry-line geometry-star" d="M0-209 80-80 209 0 80 80 0 209-80 80-209 0-80-80Z" />
+                  <path class="geometry-line geometry-square" d="M0-174 174 0 0 174-174 0Z" />
+                </g>
+
+                <g class="channels">
+                  <path d="M0-209V209M-209 0H209" />
+                  <path d="M-148-148 148 148M148-148-148 148" />
+                  <path class="channel-fine" d="M-80-193 80 193M80-193-80 193M-193-80 193 80M193-80-193 80" />
+                  <circle r="159" />
+                  <circle class="channel-dashed" r="139" />
+                </g>
+
+                <g class="circuit-marks">
+                  <path d="M-159-42h35l16 16h32M159-42h-35l-16 16h-32M-159 42h35l16-16h32M159 42h-35l-16-16h-32" />
+                  <path d="M-42-159v35l16 16v32M42-159v35l-16 16v32M-42 159v-35l16-16V76M42 159v-35l-16-16V76" />
+                  <circle cx="-159" cy="-42" r="3" /><circle cx="159" cy="-42" r="3" />
+                  <circle cx="-159" cy="42" r="3" /><circle cx="159" cy="42" r="3" />
+                  <circle cx="-42" cy="-159" r="3" /><circle cx="42" cy="-159" r="3" />
+                  <circle cx="-42" cy="159" r="3" /><circle cx="42" cy="159" r="3" />
+                </g>
+
+                <path class="circle-arc arc-copper" d="M-193 0a193 193 0 0 1 136-182" />
+                <path class="circle-arc arc-celadon" d="M193 0A193 193 0 0 1 57 182" />
+                <path class="direction-path" d="M-225-43c18-97 100-168 202-177" />
+                <path class="direction-arrow" d="m-17-228-7 12 14-4" />
+
+                <g class="sigil-nodes" filter="url(#softGlow)">
+                  <g class="node node-lilac" transform="translate(0 -209)"><use href="#nodeFrame" /><path class="node-glyph" d="M-5 6 0-7 5 6M-3 1h6" /></g>
+                  <g class="node node-celadon" transform="translate(148 -148)"><use href="#nodeFrame" /><path class="node-glyph" d="M-6-5h12L0 7Z" /></g>
+                  <g class="node node-copper" transform="translate(209 0)"><use href="#nodeFrame" /><path class="node-glyph" d="M-6 0h12M0-6v12M-4-4l8 8M4-4l-8 8" /></g>
+                  <g class="node node-lilac" transform="translate(148 148)"><use href="#nodeFrame" /><path class="node-glyph" d="M-6 5 0-7 6 5-6-1h12" /></g>
+                  <g class="node node-celadon" transform="translate(0 209)"><use href="#nodeFrame" /><path class="node-glyph" d="M-7-4 0 7 7-4M-4-4h8" /></g>
+                  <g class="node node-copper" transform="translate(-148 148)"><use href="#nodeFrame" /><path class="node-glyph" d="M-6-6v12h12V-6ZM-6 0h12" /></g>
+                  <g class="node node-lilac" transform="translate(-209 0)"><use href="#nodeFrame" /><path class="node-glyph" d="M0-7 7 0 0 7-7 0ZM0-3v6" /></g>
+                  <g class="node node-celadon" transform="translate(-148 -148)"><use href="#nodeFrame" /><path class="node-glyph" d="M-7 6 0-7 7 6M-4 2 4-2" /></g>
+                </g>
+
+                <g class="focus-well">
+                  <circle class="focus-shadow" cy="8" r="71" />
+                  <circle class="focus-ring focus-ring-outer" r="69" />
+                  <circle class="focus-ring focus-ring-inner" r="51" />
+                  <path class="focus-star" d="M0-55 15-21 51-21 24 7 34 44 0 25-34 44-24 7-51-21-15-21Z" />
+                  <path class="focus-prism" d="M0-31 27-8 17 26-17 26-27-8Z" />
+                  <circle class="center-dot" r="8" filter="url(#focusGlow)" />
                 </g>
               </g>
             </svg>
